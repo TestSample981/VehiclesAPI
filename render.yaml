@@ -1,0 +1,23 @@
+databases:
+  - name: vehicles-api
+    databaseName: vehicles_api
+    user: vehicles_api
+    plan: free
+
+services:
+  - type: web
+    name: vehicle-api-webapp
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vehicles-api
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
