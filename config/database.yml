@@ -21,10 +21,10 @@ default: &default
 
 development:
   <<: *default
-  database: vehicles_api_production
-  host: 127.0.0.1
-  username: indriti
-  password: indriti123
+  database: vehicles_api
+  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  username: vehicles_api
+  password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -58,10 +58,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: vehicles_api_test
-  host: 127.0.0.1
-  username: indriti
-  password: indriti123
+  database: vehicles_api
+  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  username: vehicles_api
+  password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,7 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: vehicles-api
-  host: 127.0.0.1
-  username: indriti
-  password: indriti123
+  database: vehicles_api
+  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  username: vehicles_api
+  password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
