@@ -85,7 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: vehicles_api_production
+  database: vehicles-api
   host: 127.0.0.1
   username: indriti
   password: indriti123
