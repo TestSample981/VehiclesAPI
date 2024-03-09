@@ -22,7 +22,7 @@ default: &default
 development:
   <<: *default
   database: vehicles_api
-  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  host: dpg-cnlq0q7jbltc73fpto70-a
   username: vehicles_api
   password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
 
@@ -59,7 +59,7 @@ development:
 test:
   <<: *default
   database: vehicles_api
-  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  host: dpg-cnlq0q7jbltc73fpto70-a
   username: vehicles_api
   password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
 
@@ -86,6 +86,6 @@ test:
 production:
   <<: *default
   database: vehicles_api
-  host: postgres://vehicles_api:bU3uayINqwf1ne8rculqY0qx5RktwCpd@dpg-cnlq0q7jbltc73fpto70-a.frankfurt-postgres.render.com/vehicles_api
+  host: dpg-cnlq0q7jbltc73fpto70-a
   username: vehicles_api
   password: bU3uayINqwf1ne8rculqY0qx5RktwCpd
